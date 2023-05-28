@@ -312,3 +312,18 @@ nav a:hover{
     transform: scale(1.05);
 
  }
+
+ /* Vans */
+
+ .vans--container {
+    display: flex;
+    flex-direction: column;
+ }
+ .vans--list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    padding: 3rem 1.7rem 0 1.7rem;
+    border-radius: 5px;
+    
+ }
