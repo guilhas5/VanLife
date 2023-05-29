@@ -14,11 +14,11 @@ function VanDetails() {
     }, [params.id])
 
     return (
-        <div className='vanDetails--container'>
+        <div className='van-details-container'>
             {van ? (
-                <div className='van-detail'>
+                <div className='van--details'>
                 <button className='return--btn'>Back to all vans</button>
-                <img src={van.imageUrl} alt="van image" />
+                <img className='van--image' src={van.imageUrl} alt="van image" />
                 <button className=
                 {`van--btn ${van.type === 'simple' ? 'simple--btn' :
                     van.type === 'luxury' ? 'luxury--btn' : van.type === 'rugged' ? 
