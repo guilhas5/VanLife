@@ -1,5 +1,6 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom'
 
 function Vans() {
     const [vans, setVans] = useState([]);
@@ -30,11 +31,14 @@ function Vans() {
             <div className='vans--list'>
                 {vans.map((van, vanIndex) => (
                     <div key={vanIndex} className='vans--item'>
-                        <img className='van--img' src={van.imageUrl} alt='van image' />
-                        <h3 className='van--name'>{van.name}</h3>
-                        <h3 className='van--price'>€{van.price}<span className='day'>/day</span></h3>
-                        <button className='van--btn'>{van.type}</button>
-
+                        <Link to={`/vans/${van.id}`}>
+                            <img className='van--img' src={van.imageUrl} alt='van image' />
+                            <h3 className='van--name'>{van.name}</h3>
+                            <h3 className='van--price'>€{van.price}<span className='day'>/day</span></h3>
+                            <button className=
+                                {`van--btn ${van.type === 'simple' ? 'simple--btn' :
+                                    van.type === 'luxury' ? 'luxury--btn' : van.type === 'rugged' ? 'rugged--btn' : ''}`}>{van.type}</button>
+                        </Link>
                     </div>
 
                 ))}
