@@ -152,12 +152,19 @@
  }
 
  .content--wrapper {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 2rem;
+     min-height: 100vh;
+     display: flex;
+     flex-direction: column;
+     margin-bottom: 2rem;
  }
+
  /* Navbar */
+
+ .link--selected {
+     font-weight: bold;
+     text-decoration: underline;
+     color: var(--neutral-color-black);
+ }
 
  .navbar--header {
      display: flex;
@@ -197,7 +204,7 @@
  .home--banner {
      background: linear-gradient(0deg, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url("./assets/home.png") no-repeat center;
      background-size: cover;
-  
+
      height: 100vh;
 
  }
@@ -246,20 +253,20 @@
 
  }
 
-footer {
-    position: fixed;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    bottom: 0;
-    height: 4rem;
-    width: 100%;
-    background-color: var(--neutral-color-black);
-    color: var(--primary-color-20);
-    
-    
+ footer {
+     position: fixed;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     bottom: 0;
+     height: 4rem;
+     width: 100%;
+     background-color: var(--neutral-color-black);
+     color: var(--primary-color-20);
 
-}
+
+
+ }
 
  /*About*/
 
@@ -518,7 +525,7 @@ footer {
  }
 
  .book--btn {
-    font-weight: 700;
+     font-weight: 700;
      margin-top: 1rem;
      background: var(--secondary-color-100);
      border: none;
@@ -532,19 +539,28 @@ footer {
      background: var(--secondary-color-80);
 
  }
-/*Layout*/
+
+ /*Layout*/
 
 
  /*HostLayout*/
-.host--navbar{
-    display: flex;
-    justify-content: start;
+ .host--navbar {
+     display: flex;
+     justify-content: start;
 
-}
+ }
 
  .host--navbar a {
-    font-size: var(--fs-300);
-    font-weight: 500;
-    padding-top: 2rem;
+    
+     font-size: var(--fs-300);
+     padding-top: 2rem;
+     color: var(--neutral-color-gray1);
+
+ }
+
+ .host--navbar a:hover {
+    text-decoration: underline;
+    font-weight: 600;
+    color: var(--neutral-color-black);
 
  }
