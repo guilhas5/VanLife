@@ -1,13 +1,14 @@
 import React from 'react'
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 
-
 function Navbar() {
     return (
+        
         <nav className='navbar--header'>
-        <Link className="site--logo" to="/">#VanLife</Link>
+            <Link className="site--logo" to="/">#VanLife</Link>
             <ul className='navbar--items'>
                 <li>
+                    <Link to='/host'>Host</Link>
                     <Link to='/about'>About</Link>
                     <Link to='/vans'>Vans</Link>
                 </li>

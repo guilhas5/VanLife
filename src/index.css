@@ -93,7 +93,7 @@
      font-family: var(--ff-sans-normal);
      font-size: var(--fs-400);
      color: hsl(var(--clr-white));
-     background-color: var(--primary-color-20);
+     background-color: var(--primary-color-40);
      line-height: 1.5;
      min-height: 100vh;
      display: grid;
@@ -151,6 +151,12 @@
      }
  }
 
+ .content--wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+ }
  /* Navbar */
 
  .navbar--header {
@@ -189,12 +195,10 @@
  /*Home */
 
  .home--banner {
-     background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url("./assets/home.png");
+     background: linear-gradient(0deg, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url("./assets/home.png") no-repeat center;
      background-size: cover;
-     background-position: center;
-     background-repeat: no-repeat;
+  
      height: 100vh;
-
 
  }
 
@@ -242,10 +246,20 @@
 
  }
 
- /*  footer {
-    background-color: #f1f1f1;
-    padding: 20px;
-    margin-top: auto; } */
+footer {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 0;
+    height: 4rem;
+    width: 100%;
+    background-color: var(--neutral-color-black);
+    color: var(--primary-color-20);
+    
+    
+
+}
 
  /*About*/
 
@@ -323,6 +337,7 @@
      flex-direction: column;
      background-color: var(--primary-color-40);
      align-items: center;
+     margin-bottom: 2rem;
  }
 
  .vans--title {
@@ -447,7 +462,7 @@
 
  .van-details-container {
 
-     padding: 4rem 1.4rem;
+     padding: 3rem 1.4rem;
      background: var(--primary-color-40);
      font-family: var(--ff-inter);
  }
@@ -457,10 +472,25 @@
      flex-direction: column;
  }
 
- .van--details .van--image {
+ .return-details-btn {
+     border: none;
+     background: transparent;
+     text-align: left;
+     font-size: var(--fs-300);
 
+ }
+
+ .return-details-btn>span {
+     margin-right: .2rem;
+ }
+
+ .return-details-btn:hover {
+     text-decoration: underline;
+ }
+
+ .van--details .van--image {
      border-radius: 8px;
-     margin-block: 47px;
+     margin-block: 35px;
  }
 
  .van--btn {
@@ -488,9 +518,9 @@
  }
 
  .book--btn {
+    font-weight: 700;
      margin-top: 1rem;
      background: var(--secondary-color-100);
-
      border: none;
      border-radius: 5px;
      padding: .3rem .8rem;
@@ -500,5 +530,21 @@
 
  .book--btn:hover {
      background: var(--secondary-color-80);
+
+ }
+/*Layout*/
+
+
+ /*HostLayout*/
+.host--navbar{
+    display: flex;
+    justify-content: start;
+
+}
+
+ .host--navbar a {
+    font-size: var(--fs-300);
+    font-weight: 500;
+    padding-top: 2rem;
 
  }
