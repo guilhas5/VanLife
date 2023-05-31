@@ -544,12 +544,8 @@
 
 
  /*HostLayout*/
- .host--navbar {
-     display: flex;
-     justify-content: start;
 
- }
-
+ 
  .host--navbar a {
     
      font-size: var(--fs-300);
@@ -564,3 +560,42 @@
     color: var(--neutral-color-black);
 
  }
+
+
+ .host-van-single {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    margin-bottom: 15px;
+    padding-block: 18px;
+    padding-left: 24px;
+    font-size: var(--fs-300);
+    
+}
+
+.host-van-single > img {
+    height: 70px;
+    border-radius: 5px;
+    margin-right: 17px;
+}
+
+.host-vans-title {
+    margin: 2rem 0 .5rem 2rem;
+    font-size: var(--fs-500);
+    font-weight: 500;
+}
+
+
+.host-vans-list {
+    padding-inline: 26px;
+}
+
+.host-van-info h3 {
+    font-size: var(--fs-400);
+    font-weight: 600;
+    margin-block: 10px;
+}
+
+.host-van-info p {
+    margin-block: 10px;
+}

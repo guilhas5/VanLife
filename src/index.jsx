@@ -13,7 +13,7 @@ import Income from './pages/Host/Income';
 import Reviews from './pages/Host/Reviews';
 import HostLayout from './components/HostLayout';
 import HostVans from './pages/Host/HostVans';
-import HostVansDetails from './pages/Host/HostVansDetails.jsx';
+import HostVansDetails from './pages/Host/HostVansDetails';
 
 
 
@@ -23,24 +23,26 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route element={<Layout />}>
+        <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="about" element={<About />} />
           <Route path="vans" element={<Vans />} />
           <Route path="vans/:id" element={<VanDetails />} />
-
-          <Route path='host' element={<HostLayout />}>
+          
+          <Route path="host" element={<HostLayout />}>
             <Route index element={<Dashboard />} />
-            <Route path='income' element={<Income />} />
-            <Route path='hostvans' element={<HostVans />} />
-            <Route path='vans/:id' element={<HostVansDetails />} />
-            <Route path='reviews' element={<Reviews />} />
+            <Route path="income" element={<Income />} />
+            <Route path="reviews" element={<Reviews />} />
+            <Route path="vans" element={<HostVans />} />
+            <Route path="vans/:id" element={<HostVansDetails />} />
           </Route>
         </Route>
       </Routes>
     </BrowserRouter>
   )
 }
+
+
 
 ReactDOM
   .createRoot(document.getElementById('root'))

@@ -18,7 +18,7 @@ function HostLayout() {
                 Income
             </NavLink>
             <NavLink
-                to='/host/hostvans'
+                to='/host/vans'
                 className={({ isActive }) => isActive ? "link--selected" : ""}
             >
                 Vans
