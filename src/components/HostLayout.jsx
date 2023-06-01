@@ -5,26 +5,26 @@ function HostLayout() {
     return (
         <nav className='host--navbar'>
             <NavLink
-                to='/host'
+                to='.'
                 end
                 className={({ isActive }) => isActive ? "link--selected" : ""}
             >
                 Dashboard
             </NavLink>
             <NavLink
-                to='/host/income'
+                to='income'
                 className={({ isActive }) => isActive ? "link--selected" : ""}
             >
                 Income
             </NavLink>
             <NavLink
-                to='/host/vans'
+                to='vans'
                 className={({ isActive }) => isActive ? "link--selected" : ""}
             >
                 Vans
             </NavLink>
             <NavLink
-                to='/host/reviews'
+                to='reviews'
                 className={({ isActive }) => isActive ? "link--selected" : ""}
             >
                 Reviews

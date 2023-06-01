@@ -17,7 +17,7 @@ function Navbar() {
                     </NavLink>
 
                     <NavLink
-                        to='/about'
+                        to='about'
                         className={({ isActive }) => isActive ? "link--selected" : ""
                         }
                     >
@@ -25,7 +25,7 @@ function Navbar() {
                     </NavLink>
 
                     <NavLink
-                        to='/vans'
+                        to='vans'
                         className={({ isActive }) => isActive ? "link--selected" : ""
                         }
                     >
