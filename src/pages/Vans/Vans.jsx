@@ -30,10 +30,10 @@ function Vans() {
 
             <h1 className='vans--title'>Explore our van options</h1>
             <div className='vans--filter'>
-                <button className='simple--btn'>Simple</button>
-                <button className='luxury--btn'>Luxury</button>
-                <button className='rugged--btn'>Rugged</button>
-                <button className='clear--btn'>Clear filters</button>
+                <Link to='?type=simple' className='simple--btn'>Simple</Link>
+                <Link to='?type=luxury' className='luxury--btn'>Luxury</Link>
+                <Link to='?type=rugged' className='rugged--btn'>Rugged</Link>
+                <Link to='.' className='clear--btn'>Clear filters</Link>
             </div>
             <div className='vans--list'>
                 {displayedVans.map((van, vanIndex) => (
