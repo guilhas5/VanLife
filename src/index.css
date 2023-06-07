@@ -373,6 +373,19 @@
      text-transform: capitalize;
 
  }
+ .simple--btn,
+ .luxury--btn,
+ .rugged--btn,
+ .clear--btn {
+     border: none;
+     border-radius: 5px;
+     padding: .3rem .8rem;
+     text-transform: capitalize;
+     color: var(--primary-color-20);
+
+
+ }
+
 
  .vans--filter>.clear--btn {
      padding-left: 0.8rem;
@@ -404,19 +417,7 @@
      text-decoration: underline;
  }
 
- .simple--btn,
- .luxury--btn,
- .rugged--btn,
- .clear--btn {
-     border: none;
-     border-radius: 5px;
-     padding: .3rem .8rem;
-     text-transform: capitalize;
-     color: var(--primary-color-20);
-
-
- }
-
+ 
  .vans--item {
      align-items: cen
  }

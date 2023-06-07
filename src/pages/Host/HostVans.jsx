@@ -13,10 +13,11 @@ function HostVans() {
                 // Handle the error
                 console.error('Error fetching vans:', error);
             })
-            }, [])
+    }, [])
 
     const hostVans = vans.map(van => (
-        <Link to={`/host/vans/${van.id}`}
+        <Link
+            to={van.id}
             key={van.id}
             className="host-van-container">
             <div className="host-van-single">

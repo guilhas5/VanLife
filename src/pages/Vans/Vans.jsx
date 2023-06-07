@@ -1,13 +1,12 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
-import { Link, useSearchParams } from 'react-router-dom'
+import { Link, Outlet, useSearchParams } from 'react-router-dom'
 
 function Vans() {
     const [searchParams, setSearchParams] = useSearchParams();
     const [vans, setVans] = useState([]);
 
     const typeFilter = searchParams.get('type');
-    console.log('typeFilter');
 
 
     useEffect(() => {
@@ -44,23 +43,23 @@ function Vans() {
             <div className='vans--filter'>
                 <button
                     onClick={() => handleFilterChange('type', 'simple')}
-                    className='simple--btn'
+                    className={`simple--btn ${typeFilter === 'simple' ? 'selected' : ''}`}
                 >
                     Simple
+                    {console.log(typeFilter)}
                 </button>
+
                 <button
                     onClick={() => handleFilterChange('type', 'luxury')}
-                    className='luxury--btn'
-                >
+                    className={`luxury--btn ${typeFilter === 'luxury' ? 'selected' : ''}`}                >
                     Luxury
                 </button>
                 <button
                     onClick={() => handleFilterChange('type', 'rugged')}
-                    className='rugged--btn'
-                >
+                    className={`rugged--btn ${typeFilter === 'rugged' ? 'selected' : ''}`}                >
                     Rugged
                 </button>
-                
+
                 {typeFilter ? (
                     <button
                         onClick={() => handleFilterChange('type', null)}
@@ -75,7 +74,12 @@ function Vans() {
             <div className='vans--list'>
                 {displayedVans.map((van, vanIndex) => (
                     <div key={vanIndex} className='vans--item'>
-                        <Link to={`/vans/${van.id}`}>
+                        <Link
+                            to={van.id}
+                            state={{
+                                search: `?${searchParams.toString()}`,
+                                type: typeFilter
+                            }}>
                             <img className='van--img' src={van.imageUrl} alt='van image' />
                             <h3 className='van--name'>{van.name}</h3>
                             <h3 className='van--price'>€{van.price}<span className='day'>/day</span></h3>
