@@ -649,3 +649,23 @@
     font-family: var(--ff-inter);
     font-weight: 400;
 }
+
+/*NotFound */
+
+.notfound--container {
+    margin-top: 8rem;
+    padding-inline: 2rem;
+    text-align: center;
+    font-family: var(--ff-inter);
+    font-size: var(--fs-400);
+}
+.notfound--container h1 {
+    margin-bottom: 4rem;
+}
+.notfound--btn {
+    margin-top: 11rem;
+    padding: 2rem;
+    background: var(--neutral-color-black);
+    border-radius: 8px;
+    color: var(--primary-color-20);
+}
