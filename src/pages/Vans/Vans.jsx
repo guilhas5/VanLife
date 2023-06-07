@@ -5,11 +5,11 @@ import { Link, useSearchParams } from 'react-router-dom'
 function Vans() {
     const [searchParams, setSearchParams] = useSearchParams();
     const [vans, setVans] = useState([]);
-    
+
     const typeFilter = searchParams.get('type');
-    console.log(typeFilter)
-    
-    
+    console.log('typeFilter');
+
+
     useEffect(() => {
         fetch('/api/vans')
             .then(res => res.json())
@@ -21,20 +21,57 @@ function Vans() {
             });
     }, []);
 
-    const displayedVans = 
-    typeFilter ? vans.filter(van => van.type === typeFilter)
-    : vans
+    const displayedVans =
+        typeFilter ? vans.filter(van => van.type === typeFilter)
+            : vans
+
+    function handleFilterChange(key, value) {
+        setSearchParams(prevParams => {
+            if (value === null) {
+                prevParams.delete(key)
+            } else {
+                prevParams.set(key, value)
+            }
+            return prevParams
+        })
+    }
+
     return (
         <div className='vans--container'>
 
 
             <h1 className='vans--title'>Explore our van options</h1>
             <div className='vans--filter'>
-                <Link to='?type=simple' className='simple--btn'>Simple</Link>
-                <Link to='?type=luxury' className='luxury--btn'>Luxury</Link>
-                <Link to='?type=rugged' className='rugged--btn'>Rugged</Link>
-                <Link to='.' className='clear--btn'>Clear filters</Link>
+                <button
+                    onClick={() => handleFilterChange('type', 'simple')}
+                    className='simple--btn'
+                >
+                    Simple
+                </button>
+                <button
+                    onClick={() => handleFilterChange('type', 'luxury')}
+                    className='luxury--btn'
+                >
+                    Luxury
+                </button>
+                <button
+                    onClick={() => handleFilterChange('type', 'rugged')}
+                    className='rugged--btn'
+                >
+                    Rugged
+                </button>
+                
+                {typeFilter ? (
+                    <button
+                        onClick={() => handleFilterChange('type', null)}
+                        className='clear--btn'
+                    >
+                        Clear filters
+                    </button>
+                ) : null}
             </div>
+
+
             <div className='vans--list'>
                 {displayedVans.map((van, vanIndex) => (
                     <div key={vanIndex} className='vans--item'>

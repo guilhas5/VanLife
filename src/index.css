@@ -437,6 +437,9 @@
      background-color: var(--neutral-color-black);
  }
 
+ .clear--btn {
+    color: var(--neutral-color-black);
+ }
  .vans--list {
      display: grid;
      grid-template-columns: 1fr 1fr;
