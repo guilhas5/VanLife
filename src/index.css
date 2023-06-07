@@ -633,3 +633,15 @@
     margin-block: 0;
     font-size: var(--fs-300);
  }
+/* HostVanInfo */
+
+.host-van-description-info > h4{
+    font-weight: 700;
+    font-size: var(--fs-300);
+    font-family: var(--ff-inter);
+}
+
+.host-van-description-info > h4 > span{
+    font-family: var(--ff-inter);
+    font-weight: 400;
+}

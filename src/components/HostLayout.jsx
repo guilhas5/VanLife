@@ -21,7 +21,7 @@ function HostLayout() {
                 to='vans'
                 className={({ isActive }) => isActive ? "link--selected" : ""}
             >
-                Vans
+                Van
             </NavLink>
             <NavLink
                 to='reviews'

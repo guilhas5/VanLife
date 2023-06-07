@@ -17,8 +17,6 @@ function VanDetails() {
         <div className='van-details-container'>
             {van ? (
                 <div className='van--details'>
-                    <button className='return-details-btn'><span>&#8592;</span>
-                        Back to all vans</button>
                     <img className='van--image' src={van.imageUrl} alt="van image" />
                     <button className=
                         {`van--btn ${van.type === 'simple' ? 'simple--btn' :

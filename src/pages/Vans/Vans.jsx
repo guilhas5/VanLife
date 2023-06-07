@@ -1,15 +1,19 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom'
+import { Link, useSearchParams } from 'react-router-dom'
 
 function Vans() {
+    const [searchParams, setSearchParams] = useSearchParams();
     const [vans, setVans] = useState([]);
-
+    
+    const typeFilter = searchParams.get('type');
+    console.log(typeFilter)
+    
+    
     useEffect(() => {
         fetch('/api/vans')
             .then(res => res.json())
             .then(data => {
-                console.log(data)
                 setVans(data.vans)
             })
             .catch((error) => {
@@ -17,6 +21,9 @@ function Vans() {
             });
     }, []);
 
+    const displayedVans = 
+    typeFilter ? vans.filter(van => van.type === typeFilter)
+    : vans
     return (
         <div className='vans--container'>
 
@@ -29,7 +36,7 @@ function Vans() {
                 <button className='clear--btn'>Clear filters</button>
             </div>
             <div className='vans--list'>
-                {vans.map((van, vanIndex) => (
+                {displayedVans.map((van, vanIndex) => (
                     <div key={vanIndex} className='vans--item'>
                         <Link to={`/vans/${van.id}`}>
                             <img className='van--img' src={van.imageUrl} alt='van image' />
