@@ -1,7 +1,11 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
 import { Link, useSearchParams } from 'react-router-dom';
-import { getVans } from '/api.js'
+import { getVans } from '/api.js';
+
+export function loader() {
+    return getVans()
+}
 
 function Vans() {
     const [searchParams, setSearchParams] = useSearchParams();
