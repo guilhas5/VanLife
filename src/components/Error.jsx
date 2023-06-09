@@ -1,11 +1,13 @@
 import React from 'react'
+import { useLoaderData } from 'react-router-dom';
 
 function Error() {
-    return (
-        <div>
-            <h2>An error occurred</h2>
-        </div>
-    )
-}
+    const data = useLoaderData
+        return (
+            <div>
+                <h2>An error occurred</h2>
+            </div>
+        )
+    }
 
 export default Error
