@@ -31,6 +31,14 @@ function Navbar() {
                     >
                         Vans
                     </NavLink>
+                    <Link
+                        to="login"
+                        className="login--link">
+                        <img
+                            src='./src/assets/avatar-icon.png'
+                            className='login--icon'
+                        />
+                    </Link>
                 </li>
             </ul>
         </nav>

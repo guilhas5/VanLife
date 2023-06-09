@@ -186,16 +186,28 @@
 
 
  nav a {
+    display: f;
      font-weight: 600;
      font-size: var(--fs-300);
      font-family: var(--ff-inter);
      color: var(--neutral-color-gray1);
-     padding: 0.25rem 1rem
+     padding: 0.25rem 1rem;
  }
 
  nav a:hover {
      color: var(--neutral-color-gray1);
      text-decoration: underline;
+ }
+
+ .login--link {
+    margin-left: auto;
+    display: inline-flex;
+    align-items: center;
+}
+ .login--icon {
+    height: 1.4rem;
+    width: 1.4rem;
+    
  }
 
 
@@ -373,6 +385,7 @@
      text-transform: capitalize;
 
  }
+
  .simple--btn,
  .luxury--btn,
  .rugged--btn,
@@ -417,7 +430,7 @@
      text-decoration: underline;
  }
 
- 
+
  .vans--item {
      align-items: cen
  }
@@ -439,8 +452,9 @@
  }
 
  .clear--btn {
-    color: var(--neutral-color-black);
+     color: var(--neutral-color-black);
  }
+
  .vans--list {
      display: grid;
      grid-template-columns: 1fr 1fr;
@@ -613,59 +627,113 @@
      margin: 2rem 1.5rem;
  }
 
- .host-van-details{
-    display: flex;
-    align-items: center;
+ .host-van-details {
+     display: flex;
+     align-items: center;
  }
+
  .host-van-details-img {
      height: 40vw;
      border-radius: 5px;
      margin-right: 1.5rem;
  }
 
- .host-van-details-info-text > h3 {
-    margin-bottom: 0.3rem;
-    margin-top: 1.5rem;
-    font-weight: 700;
-    font-size: var(--fs-400);
-    font-family: var(--ff-inter);
+ .host-van-details-info-text>h3 {
+     margin-bottom: 0.3rem;
+     margin-top: 1.5rem;
+     font-weight: 700;
+     font-size: var(--fs-400);
+     font-family: var(--ff-inter);
 
  }
 
- 
- .host-van-details-info-text > h4 {
-    margin-block: 0;
-    font-size: var(--fs-300);
+
+ .host-van-details-info-text>h4 {
+     margin-block: 0;
+     font-size: var(--fs-300);
  }
-/* HostVanInfo */
 
-.host-van-description-info > h4{
-    font-weight: 700;
-    font-size: var(--fs-300);
-    font-family: var(--ff-inter);
+ /* HostVanInfo */
+
+ .host-van-description-info>h4 {
+     font-weight: 700;
+     font-size: var(--fs-300);
+     font-family: var(--ff-inter);
+ }
+
+ .host-van-description-info>h4>span {
+     font-family: var(--ff-inter);
+     font-weight: 400;
+ }
+
+ /*NotFound */
+
+ .notfound--container {
+     margin-top: 8rem;
+     padding-inline: 2rem;
+     text-align: center;
+     font-family: var(--ff-inter);
+     font-size: var(--fs-400);
+ }
+
+ .notfound--container h1 {
+     margin-bottom: 4rem;
+ }
+
+ .notfound--btn {
+     margin-top: 11rem;
+     padding: 2rem;
+     background: var(--neutral-color-black);
+     border-radius: 8px;
+     color: var(--primary-color-20);
+ }
+
+ /*Login */
+
+ .login--container {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     padding-inline: 2rem;
+     margin-top: 1rem;
+     font-family: var(--ff-inter);
+ }
+
+ .login--form {
+     display: flex;
+     flex-direction: column;
+     margin-top: 2rem;
+     width: 100%;
+     max-width: 40rem;
+ }
+
+ .login--form>input {
+     border: 1px solid rgba(209, 213, 219);
+     height: 3rem;
+     text-indent: 1rem;
+     box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+     font-weight: 400;
+
+ }
+
+ .login--form > input:focus {
+    outline: none;
 }
 
-.host-van-description-info > h4 > span{
-    font-family: var(--ff-inter);
-    font-weight: 400;
+.login--form > input:first-of-type {
+    border-radius: 6px 6px 0px 0px;
 }
 
-/*NotFound */
+.login--form > input:last-of-type {
+    border-radius: 0px 0px 6px 6px;
+    border-top: none;
+}
 
-.notfound--container {
-    margin-top: 8rem;
-    padding-inline: 2rem;
-    text-align: center;
-    font-family: var(--ff-inter);
-    font-size: var(--fs-400);
-}
-.notfound--container h1 {
-    margin-bottom: 4rem;
-}
-.notfound--btn {
-    margin-top: 11rem;
-    padding: 2rem;
-    background: var(--neutral-color-black);
-    border-radius: 8px;
+.login--form > button {
+    background-color: var(--secondary-color-80);
+    border: none;
+    border-radius: .5rem;
+    height: 4rem;
+    margin-top: 1.8rem;
     color: var(--primary-color-20);
 }
