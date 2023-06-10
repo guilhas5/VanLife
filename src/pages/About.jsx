@@ -5,7 +5,7 @@ function Home() {
   return (
     <div className='about--container'>
       <div>
-        <img className='about--img' src='./src/assets/about.png' alt='van camping' />
+        <img className='about--img' src='./src/assets/images/about.png' alt='van camping' />
       </div>
       <div className='about--info'>
         <h1 className='about--title'>Don’t squeeze in a sedan when you could relax in a van.</h1>

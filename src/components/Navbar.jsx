@@ -1,5 +1,7 @@
 import React from 'react'
 import { NavLink, Link } from 'react-router-dom';
+import imageUrl from "/src/assets/images/avatar-icon.png"
+
 
 function Navbar() {
     return (
@@ -35,7 +37,7 @@ function Navbar() {
                         to="login"
                         className="login--link">
                         <img
-                            src='./src/assets/avatar-icon.png'
+                            src={imageUrl}
                             className='login--icon'
                         />
                     </Link>

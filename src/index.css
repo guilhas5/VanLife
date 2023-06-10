@@ -178,20 +178,19 @@
 
  .site--logo {
      text-transform: uppercase;
-     font-weight: 900;
-     font-size: var(--fs-600);
+     font-weight: 800;
+     font-size: var(--fs-500);
      margin-right: auto;
  }
 
 
 
  nav a {
-    display: f;
      font-weight: 600;
      font-size: var(--fs-300);
      font-family: var(--ff-inter);
      color: var(--neutral-color-gray1);
-     padding: 0.25rem 1rem;
+     padding: .25rem .70rem;
  }
 
  nav a:hover {
@@ -200,13 +199,12 @@
  }
 
  .login--link {
-    margin-left: auto;
     display: inline-flex;
     align-items: center;
 }
  .login--icon {
-    height: 1.4rem;
-    width: 1.4rem;
+    height: 1.3rem;
+    width: 1.3rem;
     
  }
 
