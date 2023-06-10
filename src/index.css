@@ -190,7 +190,7 @@
      font-size: var(--fs-300);
      font-family: var(--ff-inter);
      color: var(--neutral-color-gray1);
-     padding: .25rem .70rem;
+     padding: .20rem .50rem;
  }
 
  nav a:hover {
@@ -200,11 +200,11 @@
 
  .login--link {
     display: inline-flex;
-    align-items: center;
+    
 }
  .login--icon {
-    height: 1.3rem;
-    width: 1.3rem;
+    height: 1.2rem;
+    width: 1.2rem;
     
  }
 
@@ -212,7 +212,7 @@
  /*Home */
 
  .home--banner {
-     background: linear-gradient(0deg, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url("./assets/home.png") no-repeat center;
+     background: linear-gradient(0deg, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url("./assets/images/home.png") no-repeat center;
      background-size: cover;
 
      height: 100vh;

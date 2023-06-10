@@ -43,7 +43,6 @@ function Vans() {
                     className={`simple--btn ${typeFilter === 'simple' ? 'selected' : ''}`}
                 >
                     Simple
-                    {console.log(typeFilter)}
                 </button>
 
                 <button

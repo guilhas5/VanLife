@@ -1,19 +1,13 @@
 import React from 'react';
-import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom'
+import { Link, useLoaderData } from 'react-router-dom'
+import { getHostVans } from '../../../api';
 
+export function loader() {
+    return getHostVans()
+}
 
 function HostVans() {
-    const [vans, setVans] = useState([]);
-    useEffect(() => {
-        fetch(`/api/host/vans`)
-            .then(res => res.json())
-            .then(data => setVans(data.vans))
-            .catch(error => {
-                // Handle the error
-                console.error('Error fetching vans:', error);
-            })
-    }, [])
+    const vans = useLoaderData()
 
     const hostVans = vans.map(van => (
         <Link
@@ -35,15 +29,9 @@ function HostVans() {
         <section>
             <h1 className='host-vans-title'>Your Listed vans</h1>
             <div className='host-vans-list'>
-                {
-                    vans.length > 0 ? (
-                        <section>
-                            {hostVans}
-                        </section>
-                    ) : (
-                        <h2>Loading...</h2>
-                    )
-                }
+                <section>
+                    {hostVans}
+                </section>
             </div>
         </section>
     )
