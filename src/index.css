@@ -735,3 +735,8 @@
     margin-top: 1.8rem;
     color: var(--primary-color-20);
 }
+
+.login--form > button:disabled {
+    background-color: var(--secondary-color-60);
+    cursor: not-allowed;
+}
