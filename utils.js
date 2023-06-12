@@ -8,3 +8,4 @@ export async function requireAuth(request) {
             `/login?message=You must log in first.&redirectTo=${pathname}`)
     }
 }
+
