@@ -3,17 +3,15 @@ import { Link, useParams, Outlet, NavLink, useLoaderData } from "react-router-do
 import { getHostVans } from '../../../api';
 import { requireAuth } from "../../../utils";
 
-export async function loader({params}) {
-    await requireAuth()
+export async function loader({ params, request }) {
+    await requireAuth(request)
     return getHostVans(params.id)
 }
 
 function HostVansDetails() {
     const params = useParams();
     const currentVan = useLoaderData()
-    if (!currentVan) {
-        return <h1>You dont have Vans to display</h1>
-    }
+  
     return (
         <section>
             <Link
