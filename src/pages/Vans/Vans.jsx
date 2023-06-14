@@ -74,7 +74,7 @@ function Vans() {
                             onClick={() => handleFilterChange('type', null)}
                             className='clear--btn'
                         >
-                            Clear filters
+                            Clear
                         </button>
                     ) : null}
                 </div>

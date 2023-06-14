@@ -20,7 +20,7 @@ export default function Dashboard() {
                     <h3>{van.name}</h3>
                     <p>${van.price}/day</p>
                 </div>
-                <Link to={`vans/${van.id}`}>View</Link>
+                <Link className="view-dashboard-btn" to={`vans/${van.id}`}>View</Link>
             </div>
         ))
 

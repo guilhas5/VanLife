@@ -28,7 +28,7 @@ function VanDetails() {
             <div className='van--details'>
                 <img className='van--image' src={van.imageUrl} alt="van image" />
                 <button className=
-                    {`van--btn ${van.type} selected`}>{van.type}</button>
+                    {`van--btn ${van.type}--btn`}>{van.type}</button>
                 <h1>{van.name}</h1>
                 <h2 className='van--price'>€{van.price}<span className='day'>/day</span></h2>
                 <p className='van--description'>{van.description}</p>

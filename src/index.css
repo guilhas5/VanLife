@@ -22,13 +22,11 @@
      --secondary-color-100: hsla(14, 70%, 61%, 1);
      --secondary-color-80: hsla(25, 100%, 61%, 1);
      --secondary-color-60: hsla(33, 100%, 78%, 1);
+     --secondary-color-40: hsla(35, 100%, 78%, 1);
 
      --green-color-80: hsla(176, 69%, 22%, 1);
 
  }
-
-
-
 
  @media (min-width: 35em) {
      :root {
@@ -87,10 +85,8 @@
      font-weight: 400;
  }
 
-
- /*  set up the body*/
  body {
-     font-family: var(--ff-sans-normal);
+     font-family: var(--ff-inter);
      font-size: var(--fs-400);
      color: hsl(var(--clr-white));
      background-color: var(--primary-color-40);
@@ -102,15 +98,11 @@
 
      overflow-x: hidden;
      -webkit-user-select: none;
-     /* Safari */
      -ms-user-select: none;
-     /* IE 10 and IE 11 */
      user-select: none;
-     /* Standard syntax */
 
  }
 
- /* Make images easier to work with */
  img {
      max-width: 100%;
      display: block;
@@ -124,7 +116,6 @@
      font: inherit;
  }
 
- /* Inherit fonts for inputs and buttons */
  input,
  button,
  textarea,
@@ -132,10 +123,8 @@
      font: inherit;
      -webkit-tap-highlight-color: transparent;
 
-
  }
 
- /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
  @media (prefers-reduced-motion: reduce) {
      html:focus-within {
          scroll-behavior: auto;
@@ -156,6 +145,7 @@
      display: flex;
      flex-direction: column;
      margin-bottom: 2rem;
+     overflow-y: hidden;
  }
 
  /* Navbar */
@@ -172,7 +162,6 @@
      height: 7rem;
      background-color: var(--primary-color-40);
      padding-block: 0.6rem;
-     font-family: var(--ff-inter);
 
  }
 
@@ -188,7 +177,6 @@
  nav a {
      font-weight: 600;
      font-size: var(--fs-300);
-     font-family: var(--ff-inter);
      color: var(--neutral-color-gray1);
      padding: .20rem .50rem;
  }
@@ -199,15 +187,15 @@
  }
 
  .login--link {
-    display: inline-flex;
-    
-}
- .login--icon {
-    height: 1.2rem;
-    width: 1.2rem;
-    
+     display: inline-flex;
+
  }
 
+ .login--icon {
+     height: 1.2rem;
+     width: 1.2rem;
+
+ }
 
  /*Home */
 
@@ -221,35 +209,34 @@
 
  .home--container {
      display: flex;
-     flex: 1;
      flex-direction: column;
-     padding-top: 7rem;
+     padding-top: 10rem;
+     overflow-y: hidden;
      text-align: left;
      color: var(--primary-color-20);
-     font-family: var(--ff-inter);
      margin-inline: 1.4rem;
+
  }
 
  .home--title {
      font-size: var(--fs-600);
-     font-weight: 800;
-     line-height: 42px;
+     font-weight: bold;
+     line-height: 3rem;
 
  }
 
  .home--text {
-     padding-top: 2rem;
+     padding-top: 3rem;
      font-size: var(--fs-300);
      font-weight: 500;
-     line-height: 24px;
+     line-height: 2rem;
 
  }
 
  .findVan--btn {
-     margin-top: 4rem;
+     margin-top: 5rem;
      background-color: var(--secondary-color-80);
      text-align: center;
-     font-family: var(--ff-inter);
      color: var(--primary-color-20);
      border-radius: 8px;
      padding: 1rem 0;
@@ -294,7 +281,6 @@
      margin-top: 3rem;
      padding-inline: 1.3rem;
      text-align: left;
-     font-family: var(--ff-inter);
 
  }
 
@@ -318,9 +304,8 @@
      flex-direction: column;
      background-color: var(--secondary-color-60);
      margin: 2rem 1.3rem;
-     padding: 2rem 2rem 6.2rem 2rem;
-     border-radius: 8px;
-     font-family: var(--ff-inter);
+     padding: 2rem 2rem 3rem 2rem;
+     border-radius: .3rem;
 
 
  }
@@ -359,9 +344,8 @@
  }
 
  .vans--title {
-     margin-top: 2rem;
-     font-family: var(--ff-inter);
-     font-weight: 700;
+     margin-top: 1rem;
+     font-weight: bold;
      font-size: var(--fs-600);
  }
 
@@ -369,7 +353,6 @@
      display: flex;
      gap: 1rem;
      margin-top: 1.2rem;
-     font-family: var(--ff-inter);
      font-size: var(--fs-300);
 
  }
@@ -458,8 +441,8 @@
      grid-template-columns: 1fr 1fr;
      gap: 1.5rem;
      padding: 3rem 1.7rem 2rem 1.7rem;
-     font-family: var(--ff-inter);
      font-size: var(--fs-300);
+     text-decoration: none;
 
  }
 
@@ -469,12 +452,18 @@
  }
 
  .van--name {
+     font-size: var(--fs-400);
      font-weight: 600;
+     text-decoration: none;
+     color: var(--neutral-color-black);
  }
 
  .van--price {
      display: flex;
      flex-direction: column;
+     color: var(--neutral-color-gray1);
+     font-size: var(--fs-300);
+
  }
 
  .van--price>span {
@@ -486,9 +475,8 @@
 
  .van-details-container {
 
-     padding: 3rem 1.4rem;
+     padding: 0rem 1.4rem 3rem 1.4rem ;
      background: var(--primary-color-40);
-     font-family: var(--ff-inter);
  }
 
  .van--details {
@@ -497,6 +485,7 @@
  }
 
  .return-details-btn {
+     margin-top: 1rem;
      border: none;
      background: transparent;
      text-align: left;
@@ -506,6 +495,7 @@
 
  .return-details-btn>span {
      margin-right: .2rem;
+
  }
 
  .return-details-btn:hover {
@@ -513,8 +503,8 @@
  }
 
  .van--details .van--image {
-     border-radius: 8px;
-     margin-block: 35px;
+     border-radius: 0.6rem;
+     margin-block: 2rem;
  }
 
  .van--btn {
@@ -562,11 +552,9 @@
 
  /*HostLayout*/
 
-
  .host--navbar a {
 
      font-size: var(--fs-300);
-     padding-top: 2rem;
      color: var(--neutral-color-gray1);
 
  }
@@ -625,6 +613,10 @@
      margin: 2rem 1.5rem;
  }
 
+ .host-van-details--container .a {
+     margin-top: 2rem;
+ }
+
  .host-van-details {
      display: flex;
      align-items: center;
@@ -641,7 +633,6 @@
      margin-top: 1.5rem;
      font-weight: 700;
      font-size: var(--fs-400);
-     font-family: var(--ff-inter);
 
  }
 
@@ -656,12 +647,231 @@
  .host-van-description-info>h4 {
      font-weight: 700;
      font-size: var(--fs-300);
-     font-family: var(--ff-inter);
  }
 
  .host-van-description-info>h4>span {
-     font-family: var(--ff-inter);
      font-weight: 400;
+ }
+
+ /* Host Dashboard */
+
+ .host-dashboard-earnings {
+     margin-top: 1rem;
+     padding: 1.5rem 1.8rem;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     background-color: var(--secondary-color-40);
+ }
+
+
+ .host-dashboard-earnings > .info > h1 {
+     font-size: var(--fs-500);
+     color: var(--neutral-color-black);
+     margin: 0;
+ }
+
+ .host-dashboard-earnings > .info > p {
+     color: var(--neutral-color-gray1);
+ }
+
+ .host-dashboard-earnings > .info > p > span {
+     text-decoration: underline;
+     font-weight: bold;
+ }
+
+ .host-dashboard-earnings > .info > h2 {
+     margin: 0;
+     font-size: var(--fs-600);
+     font-weight: 600;
+ }
+
+ .host-dashboard-reviews {
+     background-color: #ffddb2;
+     padding: 1rem 1rem;
+     display: flex;
+     align-items: center;
+ }
+
+ .host-dashboard-reviews>h2 {
+     margin: 0;
+ }
+
+ .host-dashboard-reviews .star {
+     color: var(--secondary-color-80);
+     margin-left: 1rem;
+     font-size: var(--fs-400);
+ }
+
+ .host-dashboard-reviews p {
+     margin-left: 0.8rem;
+     font-size: var(--fs-400);
+     color: var(--neutral-color-gray1);
+     margin-right: auto;
+ }
+
+ .host-dashboard-reviews p>span {
+     font-weight: bold;
+     color: var(--neutral-color-black);
+ }
+
+ .host-dashboard-vans {
+     padding: 3rem .7rem;
+ }
+
+ .host-dashboard-vans>.top {
+     margin-bottom: 1rem;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+ }
+
+ .view-dashboard-btn {
+     margin-left: auto;
+
+ }
+
+ .host-dashboard-vans .host-vans-list {
+     padding-inline: 0;
+ }
+
+ /* Host Income */
+
+ .host--income {
+     padding:  1rem 0 2rem 0;
+     padding-inline: 1.4rem;
+     color: var(--neutral-color-black);
+ }
+
+ .host--income > h1 {
+     font-weight: bold;
+     font-size: var(--fs-500);
+ }
+
+ .host--income > p {
+     color: var(--neutral-color-gray1);
+     font-size: var(--fs-300);
+ }
+
+ .host--income > p span {
+     text-decoration: underline;
+     font-weight: bold;
+ }
+
+ .host--income > h2 {
+    margin-top: .5rem;
+     font-size: var(--fs-500);
+     color: var(--neutral-color-black);
+     font-weight: bold;
+ }
+
+ img.graph {
+     margin-top: 1rem;
+     width: 100%;
+     max-width: 70vw;
+ }
+
+ .host--income .info-header > h3 {
+     font-weight: bold;
+     font-size: var(--fs-500);
+     margin-top: 2rem;
+ }
+ .host--income .info-header > p {
+     color: var(--neutral-color-gray1);
+     font-size: var(--fs-300);
+ }
+
+ .host--income .info-header > p span {
+     text-decoration: underline;
+     font-weight: bold;
+ }
+
+
+ .host--income .transaction {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     margin-top: 2rem;
+     background-color: white;
+     margin-bottom: 31px;
+     padding: 2rem 2rem;
+     border-radius: .5rem;
+ }
+
+ .host--income .transaction>h3 {
+     font-size: var(--fs-400);
+     font-weight: bold;
+     margin: 0;
+ }
+
+ .host--income .transaction>p {
+     font-size: var(--fs-300);
+     color: var(--neutral-color-gray1);
+ }
+
+ /* Host Reviews */
+
+ .host--reviews {
+     margin-top: 1rem;
+     padding-inline: 2rem;
+     color: #161616;
+ }
+
+ .host--reviews .top--text {
+     display: flex;
+     align-items: center;
+     margin-bottom: 2.5rem;
+ }
+
+ .host--reviews .top--text>h2 {
+     font-weight: bold;
+     font-size: var(--fs-500);
+     margin: 0;
+     margin-right: 20px;
+ }
+
+ .host--reviews .top--text>p {
+     margin: 0;
+     color: var(--neutral-color-gray1);
+ }
+
+ .host--reviews .top--text>p span {
+     text-decoration: underline;
+     font-weight: bold;
+ }
+
+ .host--reviews>img {
+     margin-bottom: 3rem;
+ }
+
+ .host--reviews .review {
+     margin-block: 2rem;
+ }
+
+ .host--reviews .review .info {
+     display: flex;
+ }
+
+ .host--reviews .review .name {
+     margin-right: 0.8rem;
+     color: var(--neutral-color-black);
+     font-size: var(--fs-400);
+     font-weight: bold;
+ }
+
+ .host--reviews .review .date {
+     color: #8c8c8c;
+ }
+
+ .host--reviews hr {
+     background-color: var(--neutral-color-gray1);
+     height: 1px;
+     border: 0;
+ }
+
+ .host--reviews .review--star {
+     color: var(--secondary-color-80);
+     margin-right: 5px;
  }
 
  /*NotFound */
@@ -670,7 +880,6 @@
      margin-top: 8rem;
      padding-inline: 2rem;
      text-align: center;
-     font-family: var(--ff-inter);
      font-size: var(--fs-400);
  }
 
@@ -694,7 +903,6 @@
      align-items: center;
      padding-inline: 2rem;
      margin-top: 1rem;
-     font-family: var(--ff-inter);
  }
 
  .login--form {
@@ -714,29 +922,29 @@
 
  }
 
- .login--form > input:focus {
-    outline: none;
-}
+ .login--form>input:focus {
+     outline: none;
+ }
 
-.login--form > input:first-of-type {
-    border-radius: 6px 6px 0px 0px;
-}
+ .login--form>input:first-of-type {
+     border-radius: 6px 6px 0px 0px;
+ }
 
-.login--form > input:last-of-type {
-    border-radius: 0px 0px 6px 6px;
-    border-top: none;
-}
+ .login--form>input:last-of-type {
+     border-radius: 0px 0px 6px 6px;
+     border-top: none;
+ }
 
-.login--form > button {
-    background-color: var(--secondary-color-80);
-    border: none;
-    border-radius: .5rem;
-    height: 4rem;
-    margin-top: 1.8rem;
-    color: var(--primary-color-20);
-}
+ .login--form>button {
+     background-color: var(--secondary-color-80);
+     border: none;
+     border-radius: .5rem;
+     height: 4rem;
+     margin-top: 1.8rem;
+     color: var(--primary-color-20);
+ }
 
-.login--form > button:disabled {
-    background-color: var(--secondary-color-60);
-    cursor: not-allowed;
-}
+ .login--form>button:disabled {
+     background-color: var(--secondary-color-60);
+     cursor: not-allowed;
+ }

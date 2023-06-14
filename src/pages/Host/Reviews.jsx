@@ -20,8 +20,8 @@ export default function Reviews() {
     ]
     
     return (
-        <section className="host-reviews">
-            <div className="top-text">
+        <section className="host--reviews">
+            <div className="top--text">
                 <h2>Your reviews</h2>
                 <p>
                     Last <span>30 days</span>
@@ -29,7 +29,7 @@ export default function Reviews() {
             </div>
             <img
                 className="graph"
-                src="/assets/images/reviews-graph.png"
+                src="../src/assets/images/reviews-graph.png"
                 alt="Review graph"
             />
             <h3>Reviews (2)</h3>
@@ -37,7 +37,7 @@ export default function Reviews() {
                 <div key={review.id}>
                     <div className="review">
                         {[...Array(review.rating)].map((_, i) => (
-                            <BsStarFill className="review-star" key={i} />
+                            <BsStarFill className="review--star" key={i} />
                         ))}
                         <div className="info">
                             <p className="name">{review.name}</p>
