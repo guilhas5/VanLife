@@ -28,7 +28,7 @@ export default function Reviews() {
                 </p>
             </div>
             <img
-                className="graph"
+                className="img--graph"
                 src="../src/assets/images/reviews-graph.png"
                 alt="Review graph"
             />

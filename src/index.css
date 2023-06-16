@@ -259,7 +259,7 @@
      justify-content: center;
      align-items: center;
      bottom: 0;
-     height: 2rem;
+     height: 3rem;
      width: 100%;
      background-color: var(--neutral-color-black);
      font-size: var(--fs-300);
@@ -966,6 +966,14 @@
      margin-top: 1.8rem;
      color: var(--primary-color-20);
  }
+ .user--data {
+    margin-top: 2rem;
+    text-align: center;
+    font-size: var(--fs-300);
+ }
+ .user--data > h4 {
+    font-weight: bold;
+ }
 
  .login--form>button:disabled {
      background-color: var(--secondary-color-60);
@@ -1015,6 +1023,6 @@
      }
      .img--graph {
         margin-top:1rem;
-        max-width:50vw ;
+        max-width:40vw ;
      }
  }
