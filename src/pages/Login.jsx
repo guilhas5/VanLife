@@ -66,6 +66,12 @@ function Login() {
                         : 'Log in'}
                 </button>
             </Form>
+            <div className='user--data'>
+                <h4>User created in the server.js for testing</h4>
+                <p>Email: b@b.com</p>
+                <p>Password: p123</p>
+            </div>
+            
         </div>
     )
 }
