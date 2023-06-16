@@ -5,7 +5,7 @@ function HostVanPhotos() {
   const { currentVan } = useOutletContext();
   return (
 
-    <img src={currentVan.imageUrl} alt={`Photo of ${currentVan.imageUrl}`} />
+    <img className='host-van-photo' src={currentVan.imageUrl} alt={`Photo of ${currentVan.imageUrl}`} />
   )
 }
 

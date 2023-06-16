@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom'
 function Home() {
   return (
     <div className='about--container'>
-      <div>
+      <div className='about-img-container'>
         <img className='about--img' src='./src/assets/images/about.png' alt='van camping' />
       </div>
       <div className='about--info'>

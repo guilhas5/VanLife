@@ -31,6 +31,7 @@ function HostVansDetails() {
                         <h4>€{currentVan.price}<span className='day'>/day</span></h4>
                     </div>
                 </div>
+                <div className="host-van-navbar">
                 <NavLink
                     to='.'
                     end
@@ -50,7 +51,9 @@ function HostVansDetails() {
                 >
                     Photos
                 </NavLink>
+                </div>
                 <Outlet context={{ currentVan }} />
+
             </div>
 
         </section>

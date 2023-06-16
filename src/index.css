@@ -35,6 +35,7 @@
          --fs-600: 2.4rem;
          --fs-500: 2rem;
          --fs-400: 1.6rem;
+         --fs-300: 1.3rem
      }
 
  }
@@ -46,7 +47,7 @@
          --fs-600: 2.8rem;
          --fs-500: 2.4rem;
          --fs-400: 2rem;
-
+         --fs-300: 1.5rem
      }
  }
 
@@ -84,6 +85,7 @@
  p {
      font-weight: 400;
  }
+
 
  body {
      font-family: var(--ff-inter);
@@ -202,7 +204,6 @@
  .home--banner {
      background: linear-gradient(0deg, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url("./assets/images/home.png") no-repeat center;
      background-size: cover;
-
      height: 100vh;
 
  }
@@ -210,12 +211,13 @@
  .home--container {
      display: flex;
      flex-direction: column;
-     padding-top: 10rem;
-     overflow-y: hidden;
+     align-items: center;
+     justify-content: center;
+     gap: 1rem;
      text-align: left;
      color: var(--primary-color-20);
      margin-inline: 1.4rem;
-
+     height: 100%;
  }
 
  .home--title {
@@ -227,19 +229,20 @@
 
  .home--text {
      padding-top: 3rem;
-     font-size: var(--fs-300);
+     font-size: var(--fs-400);
      font-weight: 500;
      line-height: 2rem;
 
  }
 
  .findVan--btn {
+     position: center;
      margin-top: 5rem;
      background-color: var(--secondary-color-80);
      text-align: center;
      color: var(--primary-color-20);
      border-radius: 8px;
-     padding: 1rem 0;
+     padding: 1rem 1.8rem;
      transition: transform .5s ease-in-out;
 
 
@@ -256,14 +259,14 @@
      justify-content: center;
      align-items: center;
      bottom: 0;
-     height: 4rem;
+     height: 2rem;
      width: 100%;
      background-color: var(--neutral-color-black);
+     font-size: var(--fs-300);
      color: var(--primary-color-20);
 
-
-
  }
+
 
  /*About*/
 
@@ -271,6 +274,12 @@
      display: flex;
      flex-direction: column;
      margin-bottom: 2rem;
+
+ }
+
+ .about-img-container {
+     display: flex;
+     justify-content: center;
  }
 
  .about--img {
@@ -295,16 +304,17 @@
      font-weight: 500;
      font-size: var(--fs-300);
      color: var(--neutral-color-black);
-     line-height: 22px;
 
  }
 
  .about--explore {
      display: flex;
      flex-direction: column;
+     align-items: center;
+     justify-content: center;
      background-color: var(--secondary-color-60);
      margin: 2rem 1.3rem;
-     padding: 2rem 2rem 3rem 2rem;
+     padding: 1.8rem 1.5rem 2rem 1rem;
      border-radius: .3rem;
 
 
@@ -411,11 +421,6 @@
      text-decoration: underline;
  }
 
-
- .vans--item {
-     align-items: cen
- }
-
  .van--btn {
      padding: 0.3rem 0.8rem;
  }
@@ -446,9 +451,9 @@
 
  }
 
-
  .van--img {
-     border-radius: 8px;
+     height: 40vw;
+     border-radius: .5rem;
  }
 
  .van--name {
@@ -458,24 +463,18 @@
      color: var(--neutral-color-black);
  }
 
- .van--price {
-     display: flex;
-     flex-direction: column;
-     color: var(--neutral-color-gray1);
-     font-size: var(--fs-300);
-
- }
-
  .van--price>span {
      font-size: var(--fs-300);
  }
 
-
  /*Van Details*/
 
  .van-details-container {
-
-     padding: 0rem 1.4rem 3rem 1.4rem ;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     margin-inline: 1.4rem;
+     margin-bottom: 1rem;
      background: var(--primary-color-40);
  }
 
@@ -484,17 +483,24 @@
      flex-direction: column;
  }
 
+ .van-details-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+ }
  .return-details-btn {
      margin-top: 1rem;
      border: none;
      background: transparent;
      text-align: left;
      font-size: var(--fs-300);
+     color: var(--neutral-color-gray1);
 
  }
 
  .return-details-btn>span {
      margin-right: .2rem;
+
 
  }
 
@@ -505,25 +511,28 @@
  .van--details .van--image {
      border-radius: 0.6rem;
      margin-block: 2rem;
+
  }
 
  .van--btn {
      align-self: flex-start;
  }
 
- .van--title {
+ .van--name {
      padding-top: 1rem;
      font-weight: 700;
-     font-size: var(--fs-600);
+     font-size: var(--fs500);
  }
 
  .van--price {
-     font-weight: 700;
-     font-size: var(--fs-500);
      display: flex;
      flex-direction: row;
      align-items: center;
      margin-bottom: 0.5rem;
+     font-weight: 700;
+     font-size: var(--fs-400);
+     color: var(--neutral-color-gray1);
+
  }
 
  .van--description {
@@ -532,8 +541,9 @@
  }
 
  .book--btn {
+     display: block;
      font-weight: 700;
-     margin-top: 1rem;
+     margin-top: 2rem;
      background: var(--secondary-color-100);
      border: none;
      border-radius: 5px;
@@ -552,18 +562,14 @@
 
  /*HostLayout*/
 
- .host--navbar a {
-
-     font-size: var(--fs-300);
-     color: var(--neutral-color-gray1);
-
+ .host-van-navbar {
+     display: flex;
+     justify-content: star;
+     margin-top: 1rem;
  }
 
- .host--navbar a:hover {
-     text-decoration: underline;
-     font-weight: 600;
-     color: var(--neutral-color-black);
-
+ .host-van-navbar>a {
+     font-size: var(--fs-300);
  }
 
 
@@ -613,9 +619,6 @@
      margin: 2rem 1.5rem;
  }
 
- .host-van-details--container .a {
-     margin-top: 2rem;
- }
 
  .host-van-details {
      display: flex;
@@ -630,7 +633,7 @@
 
  .host-van-details-info-text>h3 {
      margin-bottom: 0.3rem;
-     margin-top: 1.5rem;
+     margin-top: 1.2rem;
      font-weight: 700;
      font-size: var(--fs-400);
 
@@ -644,20 +647,43 @@
 
  /* HostVanInfo */
 
- .host-van-description-info>h4 {
-     font-weight: 700;
+ .host-van-description-info {
+     display: flex;
+     flex-direction: column;
      font-size: var(--fs-300);
  }
 
+ .host-van-description-info>h4 {
+     margin-top: 1rem;
+     font-weight: 700;
+ }
+
  .host-van-description-info>h4>span {
+     margin-left: .2rem;
      font-weight: 400;
+ }
+
+ .host-van-price {
+     display: flex;
+
+ }
+
+ .host-van-price>h1 {
+     font-size: var(--fs-400);
+     margin-top: 1rem;
+ }
+
+ .host-van-photo {
+     max-width: 30vw;
+     border-radius: .2rem;
+     margin-top: 2rem;
  }
 
  /* Host Dashboard */
 
  .host-dashboard-earnings {
      margin-top: 1rem;
-     padding: 1.5rem 1.8rem;
+     padding: 1.5rem 1rem;
      display: flex;
      justify-content: space-between;
      align-items: center;
@@ -665,22 +691,22 @@
  }
 
 
- .host-dashboard-earnings > .info > h1 {
+ .host-dashboard-earnings>.info>h1 {
      font-size: var(--fs-500);
      color: var(--neutral-color-black);
      margin: 0;
  }
 
- .host-dashboard-earnings > .info > p {
+ .host-dashboard-earnings>.info>p {
      color: var(--neutral-color-gray1);
  }
 
- .host-dashboard-earnings > .info > p > span {
+ .host-dashboard-earnings>.info>p>span {
      text-decoration: underline;
      font-weight: bold;
  }
 
- .host-dashboard-earnings > .info > h2 {
+ .host-dashboard-earnings>.info>h2 {
      margin: 0;
      font-size: var(--fs-600);
      font-weight: 600;
@@ -738,50 +764,50 @@
  /* Host Income */
 
  .host--income {
-     padding:  1rem 0 2rem 0;
+     padding: 1rem 0 2rem 0;
      padding-inline: 1.4rem;
      color: var(--neutral-color-black);
  }
 
- .host--income > h1 {
+ .host--income>h1 {
      font-weight: bold;
      font-size: var(--fs-500);
  }
 
- .host--income > p {
+ .host--income>p {
      color: var(--neutral-color-gray1);
      font-size: var(--fs-300);
  }
 
- .host--income > p span {
+ .host--income>p span {
      text-decoration: underline;
      font-weight: bold;
  }
 
- .host--income > h2 {
-    margin-top: .5rem;
+ .host--income>h2 {
+     margin-top: .5rem;
      font-size: var(--fs-500);
      color: var(--neutral-color-black);
      font-weight: bold;
  }
 
- img.graph {
+ .img--graph {
      margin-top: 1rem;
-     width: 100%;
      max-width: 70vw;
  }
 
- .host--income .info-header > h3 {
+ .host--income .info-header>h3 {
      font-weight: bold;
      font-size: var(--fs-500);
      margin-top: 2rem;
  }
- .host--income .info-header > p {
+
+ .host--income .info-header>p {
      color: var(--neutral-color-gray1);
      font-size: var(--fs-300);
  }
 
- .host--income .info-header > p span {
+ .host--income .info-header>p span {
      text-decoration: underline;
      font-weight: bold;
  }
@@ -812,26 +838,27 @@
  /* Host Reviews */
 
  .host--reviews {
-     margin-top: 1rem;
+     display: flex;
+     flex-direction: column;
+     margin: 1rem 0 2rem 0;
+     gap: 1rem;
      padding-inline: 2rem;
-     color: #161616;
+     color: var(--neutral-color-black);
+     font-size: var(--fs-300);
  }
 
  .host--reviews .top--text {
      display: flex;
      align-items: center;
-     margin-bottom: 2.5rem;
  }
 
  .host--reviews .top--text>h2 {
      font-weight: bold;
      font-size: var(--fs-500);
-     margin: 0;
      margin-right: 20px;
  }
 
  .host--reviews .top--text>p {
-     margin: 0;
      color: var(--neutral-color-gray1);
  }
 
@@ -840,16 +867,12 @@
      font-weight: bold;
  }
 
- .host--reviews>img {
-     margin-bottom: 3rem;
- }
 
- .host--reviews .review {
-     margin-block: 2rem;
- }
 
  .host--reviews .review .info {
      display: flex;
+     flex-direction: column;
+     margin-bottom: 2rem;
  }
 
  .host--reviews .review .name {
@@ -947,4 +970,51 @@
  .login--form>button:disabled {
      background-color: var(--secondary-color-60);
      cursor: not-allowed;
+ }
+
+ .van-details-wrapper {
+     display: flex;
+ }
+
+ @media (min-width: 35em) {
+     .home--container {
+         text-align: center;
+         margin-inline: 3rem;
+         gap: 2rem;
+     }
+     .about--container {
+         margin-inline: 3rem;
+     }
+     
+ }
+
+ @media (min-width: 45em) {
+     .home--container {
+         text-align: center;
+         margin-inline: 8rem;
+         gap: 3rem;
+     }
+     .about--container {
+         margin-top: 2rem;
+     }
+     .van--details {
+         flex-direction: row;
+         margin-right:1rem ;
+         gap: 1rem;
+     }
+     
+ .van-details-info {
+    justify-content: center;
+    gap: 1.5rem;  
+ }
+     .van--details .van--image {
+         max-width: 60vw;
+     }
+     .van--img {
+        height: 35vw;
+     }
+     .img--graph {
+        margin-top:1rem;
+        max-width:50vw ;
+     }
  }
