@@ -4,7 +4,7 @@
 
 ### Project Description:
 
-#### This prototype is a training project aimed at practicing React Router concepts. 
+### This prototype is a training project aimed at practicing React Router concepts. 
 It serves as a platform for individuals interested in van rental, allowing them to either rent a van or offer their own van for rent. 
 
 The project includes a simulated login system that grants users access to their host homepage, providing an overview of their ongoing rentals. 
