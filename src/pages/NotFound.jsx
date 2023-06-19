@@ -1,7 +1,6 @@
-import React from 'react'
-import Navbar from '../components/Navbar'
-import Footer from '../components/Footer'
-import { Link } from 'react-router-dom'
+import React from 'react';
+import Footer from '../components/Footer';
+import { Link } from 'react-router-dom';
 
 function NotFound() {
   return (

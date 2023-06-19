@@ -1,6 +1,6 @@
-import React from "react"
-import { BsStarFill } from "react-icons/bs"
-import reviewsImg from "/src/images/reviews-graph.png"
+import React from "react";
+import { BsStarFill } from "react-icons/bs";
+import reviewsImg from "/src/images/reviews-graph.png";
 
 export default function Reviews() {
     const reviewsData = [
