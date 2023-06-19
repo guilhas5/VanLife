@@ -1,6 +1,6 @@
 import React from 'react'
 import { NavLink, Link } from 'react-router-dom';
-import imageUrl from "/src/assets/images/avatar-icon.png"
+import imageUrl from "/assets/images/avatar-icon.png"
 
 
 function Navbar() {
