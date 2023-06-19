@@ -40,8 +40,8 @@ function Login() {
     return (
         <div className="login--container">
             <h1>Sign in to your account</h1>
-            {message && <h4>{message}</h4>}
-            {errorMessage && <p>{errorMessage}</p>}
+            {message && <h4 className='login--error'>{message}</h4>}
+            {errorMessage && <p className='login--error'>{errorMessage}</p>}
 
             <Form
                 method='post'

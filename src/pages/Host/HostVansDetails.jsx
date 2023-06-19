@@ -13,7 +13,7 @@ function HostVansDetails() {
     const currentVan = useLoaderData()
   
     return (
-        <section>
+        <section className="host-van-details-info">
             <Link
                 to='..'
                 relative='path'
@@ -22,15 +22,13 @@ function HostVansDetails() {
                 Back to all vans
             </Link>
 
-            <div className='host-van-details--container'>
+            <div className='host-van-details--info'>
                 <div className='host-van-details'>
                     <img className='host-van-details-img' src={currentVan.imageUrl} alt={`Photo of ${currentVan.imageUrl}`} />
                     <div className='host-van-details-info-text'>
                         <button className={`van--btn ${currentVan.type}--btn`}>{currentVan.type}</button>
                         <h3>{currentVan.name}</h3>
                         <h4>€{currentVan.price}<span className='day'>/day</span></h4>
-                    </div>
-                </div>
                 <div className="host-van-navbar">
                 <NavLink
                     to='.'
@@ -55,6 +53,8 @@ function HostVansDetails() {
                 <Outlet context={{ currentVan }} />
 
             </div>
+                    </div>
+                </div>
 
         </section>
     )
