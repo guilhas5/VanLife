@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom'
 function Home() {
   return (
     <div className='about--container'>
-        <img className='about--img' src='/assets/images/about.png' alt='van camping' />
+        <img className='about--img' src='/images/about.png' alt='van camping' />
       <div className='about--info'>
         <h1 className='about--title'>Don’t squeeze in a sedan when you could relax in a van.</h1>
         <p className='about--text'>Our mission is to enliven your road trip with the perfect
