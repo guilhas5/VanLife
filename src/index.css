@@ -190,7 +190,7 @@
  /*Home */
 
  .home--banner {
-     background: linear-gradient(0deg, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url("/images/home.png") no-repeat center;
+     background: linear-gradient(0deg, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url("/src/images/home.png") no-repeat center;
      background-size: cover;
      height: 100vh;
  }
