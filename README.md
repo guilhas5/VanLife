@@ -14,7 +14,7 @@ It's important to note that this version focuses on implementing React Router an
 ## Technologies 
 * [React](https://react.dev/)
 * [React Router](https://reactrouter.com/en/main)
-* [Firestore](https://firebase.google.com/docs)
+* [Firebase](https://firebase.google.com/docs)
 * [Vite](https://vitejs.dev/guide/)
 * [Mirage.js](https://miragejs.com/docs/getting-started/introduction/)
 * CSS
