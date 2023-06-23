@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import aboutImg from '/src/images/about.png';
 
-function Home() {
+function About() {
   return (
     <div className='about--container'>
       <img className='about--img' src={aboutImg} alt='van camping' />
@@ -25,4 +25,4 @@ function Home() {
   )
 }
 
-export default Home
+export default About

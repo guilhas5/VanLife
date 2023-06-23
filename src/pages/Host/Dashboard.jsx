@@ -9,7 +9,7 @@ export async function loader({ request }) {
     return defer({ vans: getHostVans() })
 }
 
-export default function Dashboard() {
+ function Dashboard() {
     const loaderData = useLoaderData()
 
     function renderVanElements(vans) {
@@ -61,3 +61,4 @@ export default function Dashboard() {
         </>
     )
 }
+export default Dashboard

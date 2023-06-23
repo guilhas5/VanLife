@@ -1,6 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { Outlet } from 'react-router-dom';
+
 function HostLayout() {
     return (
         <nav className='host--navbar'>

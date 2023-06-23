@@ -2,7 +2,7 @@ import React from "react";
 import { BsStarFill } from "react-icons/bs";
 import reviewsImg from "/src/images/reviews-graph.png";
 
-export default function Reviews() {
+function Reviews() {
     const reviewsData = [
         {
             rating: 5,
@@ -19,7 +19,7 @@ export default function Reviews() {
             id: "2",
         },
     ]
-    
+
     return (
         <section className="host--reviews">
             <div className="top--text">
@@ -43,7 +43,7 @@ export default function Reviews() {
                         <div className="info">
                             <p className="name">{review.name}</p>
                             <p className="date">{review.date}</p>
-                        <p>{review.text}</p>
+                            <p>{review.text}</p>
                         </div>
                     </div>
                     <hr />
@@ -52,3 +52,4 @@ export default function Reviews() {
         </section>
     )
 }
+export default Reviews
