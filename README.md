@@ -2,7 +2,7 @@
 
 ## Introduction
 
-#### This prototype is a training project aimed at practicing React Router concepts. 
+ This prototype is a training project aimed at practicing React Router concepts. 
 It serves as a platform for individuals interested in van rental, allowing them to either rent a van or offer their own van for rent. 
 This project includes a fake server implemented using Mirage.js. The fake server provides simulated API endpoints for testing and development purposes.
 
@@ -26,7 +26,7 @@ It's important to note that this version focuses on implementing React Router an
 ## Installation
 
 ## Follow these steps to run the project locally:
-#### Make sure you have Node.js and npm (Node Package Manager) installed on your machine.
+ Make sure you have Node.js and npm (Node Package Manager) installed on your machine.
 
 ### 1. Clone the repository:
 
